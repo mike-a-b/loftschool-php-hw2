@@ -10,3 +10,4 @@ function createUser()
         'age' => mt_rand(18, 45)
     ];
 }
+
