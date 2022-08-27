@@ -10,8 +10,8 @@ file_put_contents('users.json', json_encode($users));
 $data = file_get_contents('users.json');
 $decodedUsers = json_decode($data, true);
 
-var_dump($decodedUsers);
-
+//var_dump($decodedUsers);
+var_export($decodedUsers);
 $names = [];
 $sumAge = 0;
 
@@ -24,5 +24,6 @@ foreach ($decodedUsers as $user) {
     $sumAge += $user['age'];
 }
 
-var_dump($names);
-echo "Средний возраст: " . ($sumAge / count($decodedUsers));
+//var_dump($names);
+var_export($names);
+echo "Средний возраст: " . (int)($sumAge / count($decodedUsers));
